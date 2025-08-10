@@ -1,0 +1,17 @@
+name: napari-usg-masker
+display_name: USG Video Masker
+contributions:
+  commands:
+    - id: napari-usg-masker.make_widget
+      python_name: napari_usg_masker._widget:USGMaskerWidget
+      title: Create USG Masker Widget
+    - id: napari-usg-masker.get_reader
+      python_name: napari_usg_masker._reader:napari_get_reader
+      title: Load USG mask data
+  widgets:
+    - command: napari-usg-masker.make_widget
+      display_name: USG Masker
+  readers:
+    - command: napari-usg-masker.get_reader
+      filename_patterns:
+        - "*.json"
